@@ -1,95 +1,91 @@
-🔐 Password Manager (Python + Tkinter)
+Password Manager (Tkinter + JSON)
 
-A simple password manager built with Python and Tkinter. It generates strong random passwords, stores them in a file, and copies them to the clipboard for easy use.
+A simple GUI-based Password Manager built with Python and Tkinter.
+It can generate secure passwords, save them to a JSON file, and search stored credentials.
 
-📌 Features
+Features
 
-Generate strong random passwords
+Generate random strong passwords
 
-Mix of letters, numbers, and symbols
+Copy generated password to clipboard
 
-Copy password automatically to clipboard
+Save website, email, and password to Data.json
 
-Save website, email, and password to a local file
+Search saved credentials by website name
 
-Simple graphical user interface (GUI) using Tkinter
+Simple Tkinter GUI interface
 
-🖥️ Screenshots
+Project Structure
+password-manager/
+│
+├── main.py          # Main Python file (your code)
+├── Data.json         # Stores saved passwords
+├── logo.png           # App logo image
+└── README.md          # Project documentation
 
-(Add a screenshot of your app here if you want)
+Requirements
 
-🛠️ Requirements
+Make sure you have Python installed (3.8+ recommended).
 
-You need Python 3 installed.
-Install required modules:
+Install required packages:
 
 pip install pyperclip
 
 
-Tkinter comes built-in with most Python installations.
+Tkinter comes pre-installed with Python on most systems.
 
-🚀 How to Run
-
-Clone or download this project
-
-Make sure logo.png is in the same folder
-
-Run the script:
-
+How to Run
 python main.py
 
-💾 How It Works
-Password Generator
+How It Works
+Save Password
 
-Randomly selects:
+Enter website, email, and password
 
-8–10 letters
+Click Add
 
-2–4 numbers
+Data is saved in Data.json
 
-2–4 symbols
+Generate Password
 
-Combines them into a strong password
+Click Generate Password
 
-Copies it to your clipboard
+Password is auto-filled and copied to clipboard
 
-Saving Passwords
+Search Password
 
-Stores data in Data.txt in this format:
+Enter website name
 
-website | email | password
+Click Search
 
-⚠️ Notes
+Email and password will show in a popup
 
-This project stores passwords in plain text.
+Example Data.json Format
+{
+    "google.com": {
+        "email": "example@gmail.com",
+        "password": "abc123!@#"
+    }
+}
 
-Do not use it for real sensitive accounts without encryption.
+Notes
 
-This is for learning and practice purposes.
+Website name is used as the unique key
 
-📚 Technologies Used
+If Data.json does not exist, the app will create it automatically
 
-Python
+Tkinter messagebox titles may not show properly on macOS
 
-Tkinter (GUI)
+Future Improvements
 
-random module
+Encrypt stored passwords
 
-pyperclip
+Add delete/edit functionality
 
-👨‍💻 Author
+Use a database instead of JSON
+
+Add password strength checker
+
+Author
 
 Abu Hurayra Farhan
-Computer Science Student | Python Developer
-
-⭐ Future Improvements
-
-Encrypt saved passwords
-
-Add search feature
-
-Add delete/edit entries
-
-Save data in JSON instead of text
-
-Add dark mode UI
